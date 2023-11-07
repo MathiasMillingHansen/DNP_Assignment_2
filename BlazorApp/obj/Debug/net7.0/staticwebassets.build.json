@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "m9AqjZ1i0vH1UVP+Vzlc/TmRvWc8BUqn00S+M7b+8vg=",
+  "Hash": "18nS9YjewqV3ofW37aMQHOa19BoZKLF+FriJreXDeRo=",
   "Source": "BlazorApp",
   "BasePath": "_content/BlazorApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BlazorApp/wwwroot",
       "Source": "BlazorApp",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/obj/Debug/net7.0/scopedcss/bundle/BlazorApp.styles.css",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/obj/Debug/net7.0/scopedcss/bundle/BlazorApp.styles.css",
       "SourceId": "BlazorApp",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/obj/Debug/net7.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/obj/Debug/net7.0/scopedcss/bundle/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "BlazorApp.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/obj/Debug/net7.0/scopedcss/bundle/BlazorApp.styles.css"
+      "OriginalItemSpec": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/obj/Debug/net7.0/scopedcss/bundle/BlazorApp.styles.css"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/obj/Debug/net7.0/scopedcss/projectbundle/BlazorApp.bundle.scp.css",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/obj/Debug/net7.0/scopedcss/projectbundle/BlazorApp.bundle.scp.css",
       "SourceId": "BlazorApp",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/obj/Debug/net7.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/obj/Debug/net7.0/scopedcss/projectbundle/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "BlazorApp.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/obj/Debug/net7.0/scopedcss/projectbundle/BlazorApp.bundle.scp.css"
+      "OriginalItemSpec": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/obj/Debug/net7.0/scopedcss/projectbundle/BlazorApp.bundle.scp.css"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/bootstrap/bootstrap.min.css",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/bootstrap/bootstrap.min.css.map",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/FONT-LICENSE",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/FONT-LICENSE"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/ICON-LICENSE",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/ICON-LICENSE"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/open-iconic/README.md",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/open-iconic/README.md",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/site.css",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/site.css",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/css/styles.css",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/css/styles.css",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot/css/styles.css"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/favicon.png",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/favicon.png",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/icons/clear_funnel.png",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/icons/clear_funnel.png",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "icons/clear_funnel.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot/icons/clear_funnel.png"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/icons/editGif.gif",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/icons/editGif.gif",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "icons/editGif.gif",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot/icons/editGif.gif"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/icons/funnel.png",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/icons/funnel.png",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "icons/funnel.png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot/icons/funnel.png"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/icons/Login.png",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/icons/Login.png",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "icons/Login.png",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot/icons/Login.png"
     },
     {
-      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/icons/Logout.png",
+      "Identity": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/icons/Logout.png",
       "SourceId": "BlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/BlazorApp/wwwroot/",
+      "ContentRoot": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/BlazorApp/wwwroot/",
       "BasePath": "_content/BlazorApp",
       "RelativePath": "icons/Logout.png",
       "AssetKind": "All",

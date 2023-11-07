@@ -327,11 +327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/HttpClients.csproj",
+      "projectUniqueName": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/HttpClients/HttpClients.csproj",
       "projectName": "HttpClients",
-      "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/HttpClients.csproj",
+      "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/HttpClients/HttpClients.csproj",
       "packagesPath": "/Users/mathiashansen/.nuget/packages/",
-      "outputPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/",
+      "outputPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/HttpClients/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mathiashansen/.nuget/NuGet/NuGet.Config"
@@ -346,8 +346,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/Shared.csproj": {
-              "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/Shared.csproj"
+            "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Shared/Shared.csproj": {
+              "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Shared/Shared.csproj"
             }
           }
         }

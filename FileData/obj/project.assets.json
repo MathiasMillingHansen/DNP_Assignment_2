@@ -345,11 +345,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/FileData.csproj",
+      "projectUniqueName": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/FileData/FileData.csproj",
       "projectName": "FileData",
-      "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/FileData.csproj",
+      "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/FileData/FileData.csproj",
       "packagesPath": "/Users/mathiashansen/.nuget/packages/",
-      "outputPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/",
+      "outputPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/FileData/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mathiashansen/.nuget/NuGet/NuGet.Config"
@@ -364,8 +364,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Application/Application.csproj": {
-              "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Application/Application.csproj"
+            "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Application/Application.csproj": {
+              "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Application/Application.csproj"
             }
           }
         }

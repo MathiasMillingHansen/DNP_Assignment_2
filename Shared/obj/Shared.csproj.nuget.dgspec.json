@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/Shared.csproj": {}
+    "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Shared/Shared.csproj": {}
   },
   "projects": {
-    "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/Shared.csproj": {
+    "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Shared/Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/Shared.csproj",
+        "projectUniqueName": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Shared/Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/Shared.csproj",
+        "projectPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Shared/Shared.csproj",
         "packagesPath": "/Users/mathiashansen/.nuget/packages/",
-        "outputPath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/",
+        "outputPath": "/Users/mathiashansen/RiderProjects/DNP_Assignment_2/Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mathiashansen/.nuget/NuGet/NuGet.Config"

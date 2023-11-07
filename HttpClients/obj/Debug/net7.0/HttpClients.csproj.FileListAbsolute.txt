@@ -1,0 +1,15 @@
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/bin/Debug/net7.0/HttpClients.deps.json
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/bin/Debug/net7.0/HttpClients.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/bin/Debug/net7.0/HttpClients.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/bin/Debug/net7.0/Shared.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/bin/Debug/net7.0/Shared.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.csproj.AssemblyReference.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.AssemblyInfoInputs.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.AssemblyInfo.cs
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.csproj.CoreCompileInputs.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.csproj.CopyComplete
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/refint/HttpClients.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/HttpClients.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/obj/Debug/net7.0/ref/HttpClients.dll

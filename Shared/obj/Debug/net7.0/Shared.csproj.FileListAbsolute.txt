@@ -1,0 +1,12 @@
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/bin/Debug/net7.0/Shared.deps.json
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/bin/Debug/net7.0/Shared.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/bin/Debug/net7.0/Shared.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/Shared.AssemblyInfoInputs.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/Shared.AssemblyInfo.cs
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/Shared.csproj.CoreCompileInputs.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/Shared.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/refint/Shared.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/Shared.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/ref/Shared.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/Shared/obj/Debug/net7.0/Shared.csproj.AssemblyReference.cache

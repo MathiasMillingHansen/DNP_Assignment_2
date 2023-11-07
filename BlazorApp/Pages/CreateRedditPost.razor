@@ -1,0 +1,133 @@
+﻿@page "/CreateRedditPost"
+@using global::Shared.Models
+@using Clients.ClientInterfaces
+@using global::Shared.DTOs.RedditPost
+@using global::Shared.DTOs.User
+@using Microsoft.AspNetCore.Authentication
+@using System.Security.Claims
+@using BlazorApp.Authentication
+@inject IUserService UserService
+@inject IRedditPostService RedditPostService;
+@inject NavigationManager NavMgr;
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<div class="CreateRedditPostViewGeneral">
+    <h3>Create a Reddit Post</h3>
+</div>
+
+<div class="card">
+    @if (_users == null)
+    {
+        <label>Loading users...</label>
+    }
+    else if (!_users.Any())
+    {
+        <label>No users, you cannot create a RedditPost without assignee.</label>
+    }
+    else
+    {
+        <h3>Create Reddit Post</h3>
+        <div class="form-group field">
+            <label>Title:</label>
+            <br/>
+            <input type="text" @bind="_redditPostTitle"/>
+        </div>
+
+        <br/>
+
+
+        <div class="form-group-field">
+            <label>Body:</label>
+            <textarea @bind="_redditPostBody" style="resize: none;" class="reddit-post-body"></textarea>
+        </div>
+
+
+        <div class="button-row">
+            @if (!string.IsNullOrEmpty(_msg))
+            {
+                <label style="color: red">@_msg</label>
+            }
+            @if (!string.IsNullOrEmpty(_successMessage))
+            {
+                <label style="color: green">@_successMessage</label>
+            }
+            <button @onclick="Create" class="acceptbtn">Create</button>
+        </div>
+    }
+</div>
+
+@code {
+    private IEnumerable<User>? _users;
+    private OwnerDto _selectedUser = new("Not selected");
+    private string _redditPostTitle = "";
+    private string _redditPostBody = "";
+
+    private string _msg = "";
+    private string _successMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _msg = "";
+        try
+        {
+            _users = await UserService.GetUsersAsync();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _msg = e.Message;
+        }
+    }
+
+    private async Task Create()
+    {
+        _msg = "";
+        if (_selectedUser == null)
+        {
+            try
+            {
+                Console.WriteLine("User is null");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        if (string.IsNullOrEmpty(_redditPostTitle))
+        {
+            _msg = "Title cannot be empty!";
+            return;
+        }
+        if (string.IsNullOrEmpty(_redditPostBody))
+        {
+            _msg = "Body cannot be empty!";
+            return;
+        }
+
+        try
+        {
+            var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authenticationState.User;
+            
+            _selectedUser = new OwnerDto(user.FindFirstValue(ClaimTypes.Name));
+            
+            RedditPostCreationDto dto = new RedditPostCreationDto(_selectedUser, _redditPostBody, _redditPostTitle);
+            await RedditPostService.CreatePostAsync(dto);
+            NavMgr.NavigateTo("/CreateRedditPost");
+
+            _successMessage = "Post was created successfully!";
+
+            _selectedUser = null;
+            _redditPostTitle = "";
+            _redditPostBody = "";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _msg = e.Message;
+        }
+    }
+
+}
+

@@ -1,0 +1,17 @@
+﻿
+.field {
+    margin-top: 20px;
+}
+
+.acceptbtn {
+    background-color: lightgreen;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button-row {
+    margin-top: 15px;
+}
+

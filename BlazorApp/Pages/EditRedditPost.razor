@@ -1,0 +1,86 @@
+@page "/EditRedditPost/{id:int}"
+@using global::Shared.Models
+@using global::Shared.DTOs.RedditPost
+@using Clients.ClientInterfaces
+@inject IRedditPostService _redditPostService
+@inject IUserService _userService
+@inject NavigationManager _navigationManager
+
+<h3 style="display: flex; width: 100%; justify-content: center">Edit Reddit Post</h3>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private RedditPostUpdateDto dto = null!;
+    private string msg = "";
+    private IEnumerable<User>? users;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        msg = "";
+        try
+        {
+            users = await _userService.GetUsersAsync();
+            RedditPostDto redditPostData = await _redditPostService.GetPostByIdAsync(Id);
+            //User currentlyAssigned = users.First(user => user.Username.Equals(redditPostData.User.Username));
+
+            dto = new(redditPostData.Body);
+            dto.Id = redditPostData.Id;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+        
+    }
+    
+    private async Task UpdateAsync()
+    {
+        try
+        {
+            await _redditPostService.UpdateAsync(dto);
+            _navigationManager.NavigateTo("/ViewRedditPosts");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+}
+
+<div class="card">
+    @if (users == null)
+    {
+        <label>Loading users...</label>
+    }
+    else if (!users.Any())
+    {
+        <label>No users, you cannot create a Todo</label>
+    }
+    else if (dto == null)
+    {
+        <label>Loading Reddit Post data..</label>
+    }
+    else
+    {
+        <h3>Update Reddit Post</h3>
+        <div class="form-group field">
+            <label>Post Id: @dto.Id.ToString()</label>
+
+        </div>
+        <div class="form-group field">
+            <label>Post Body:</label>
+            <textarea @bind="dto.Body" class="reddit-post-body" style="resize: none"> </textarea>
+        </div>
+        <div class="button-row">
+            <button @onclick="UpdateAsync" class="acceptbtn">Update</button>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(msg))
+    {
+        <label style="color: red">@msg</label>
+    }
+</div>

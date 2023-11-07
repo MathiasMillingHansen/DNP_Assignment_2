@@ -1,0 +1,18 @@
+﻿// log in as Jens
+POST https://localhost:7188/auth/login
+Content-Type: application/json
+
+{ "Username" : "Jens", "Password" : "1234" }
+
+###
+
+GET https://localhost:7188/RedditPost/5
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI2NWVmYWYyZi02NGE5LTRhYTMtOTExNy05N2U4OTU5MDNiN2EiLCJpYXQiOiIzMS8xMC8yMDIzIDA5LjU1LjUxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6IkplbnMiLCJleHAiOjE2OTg3NDk3NTEsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZUJsYXpvcldhc21DbGllbnQifQ.mCEidkGMwXvsBdOxYr0wc74hMjGoMVJtBXJetG0vOlZtgemzZn_WMmMOMDi5taozkqiPbmrgyz-52iMWRE3x3Q
+
+
+###
+
+DELETE https://localhost:7188/RedditPost/4
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJkNzU4ZTVlYy00ZDNlLTRlYTEtODgwZS03ZTI5NWExNWI5NzciLCJpYXQiOiIzMC8xMC8yMDIzIDA5LjE4LjE1IiwiTmFtZSI6IkplbnMiLCJleHAiOjE2OTg2NjEwOTUsImlzcyI6IkpXVEF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSldUU2VydmljZUJsYXpvcldhc21DbGllbnQifQ.mkTdobX_QxKcvI5o6C1oeXg1QxX0KhkhIl8hXZZen1gjW8Ame5i-x7xr4Ev0bCEZFYIE6enPCXGYtl7C7IhLog
+
+

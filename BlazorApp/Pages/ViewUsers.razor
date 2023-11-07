@@ -1,0 +1,55 @@
+﻿@page "/ViewUsers"
+@using global::Shared.Models
+@using Clients.ClientInterfaces
+@inject IUserService UserService
+
+<div class="ViewUsersGeneral">
+    <h3 style="text-align: center">Overview of all users</h3>
+</div>
+
+@if (!string.IsNullOrEmpty(_msg))
+{
+    <div>
+        <span>@_msg</span>
+    </div>
+}
+
+@if (_users == null)
+{
+    <span>Loading..</span>
+}
+else if (!_users.Any())
+{
+    <span>No users to be found</span>
+}
+else
+{
+    <div class="users-container">
+        @foreach (User user in _users)
+        {
+            <div class="user-card">
+                <label>@user.Username</label>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private IEnumerable<User>? _users;
+    private string _msg = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        _msg = "";
+        try
+        {
+            _users = await UserService.GetUsersAsync();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _msg = e.Message;
+        }
+    }
+   
+}

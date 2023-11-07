@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "eI0oG6PJmp9i6QQJTpaWUXSy0NMr5wVHWYVFkXkTNHse8sMNLq9eTtGzlZbq3TqcWOHhzBQN1GVZmEv1ETNuzQ==",
+  "success": true,
+  "projectFilePath": "/Users/mathiashansen/RiderProjects/DNP_Assignemt/HttpClients/HttpClients.csproj",
+  "expectedPackageFiles": [
+    "/Users/mathiashansen/.nuget/packages/microsoft.aspnetcore.authorization/7.0.13/microsoft.aspnetcore.authorization.7.0.13.nupkg.sha512",
+    "/Users/mathiashansen/.nuget/packages/microsoft.aspnetcore.metadata/7.0.13/microsoft.aspnetcore.metadata.7.0.13.nupkg.sha512",
+    "/Users/mathiashansen/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/mathiashansen/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.1/microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "/Users/mathiashansen/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "/Users/mathiashansen/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

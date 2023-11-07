@@ -1,0 +1,160 @@
+﻿@page "/ViewRedditPosts"
+@using global::Shared.Models
+@using Clients.ClientInterfaces
+@inject IRedditPostService RedditPostService;
+@inject NavigationManager _navigationManager;
+@inject AuthenticationStateProvider AuthenticationStateProvider;
+
+<h3 style="display: flex; width: 100%; justify-content: center">View Reddit Posts</h3>
+
+<div class="filter-bar">
+    <div class="filters-container">
+        <img src="icons/@(_doShowFilters ? "clear_" : "")funnel.png" class="funnel" style="width: 32px; height: 32px" @onclick="@(() => _doShowFilters = !_doShowFilters)" alt="Funnel"/>
+    </div>
+    @if (_doShowFilters)
+    {
+        <div class="filterBar2">
+
+            <div class="filter">
+                <label>Username:</label>
+                <input type="text" @bind="_ownerFilter"/>
+            </div>
+
+            <div class="filter">
+                <label>Post id:</label>
+                <input type="number" @bind="_idFilter"/>
+            </div>
+
+            <div class="filter">
+                <label>Title contains:</label>
+                <input type="text" @bind="_titleFilter"/>
+            </div>
+
+        </div>
+    }
+</div>
+
+
+<div class="LoadPostBar">
+    <button class="LoadButton" @onclick="LoadRedditPosts">Load posts</button>
+</div>
+
+@if (_redditPosts == null)
+{
+}
+else if (!_redditPosts.Any())
+{
+    <p>No Todos to display</p>
+}
+else
+{
+    @foreach (var item in _redditPosts)
+    {
+        <div class="box-shadow">
+
+            <span>
+
+                <div class="RedditPost">
+
+                    <div class="row" style="width:100%; padding: 1em; margin-bottom: 2em">
+
+                        <div class="col-4" style="justify-content: left; display: flex; align-items: center">
+                            <div class="PostOwner">Post Creator: <a class="LinkToUser" href="/user?Username=@item.User.Username">@item.User.Username</a></div>
+                        </div>
+
+                        <div class="col-4" style="justify-content: center; display: flex; align-items: center">
+                            <div class="PostTitle">
+                                <a class="LinkToPost" @onclick="@(() => _navigationManager.NavigateTo($"/ViewSingleRedditPost/{item.Id}"))">@item.Title</a>
+                            </div>
+                        </div>
+
+                        <div class="col-4" style="justify-content: right; display: flex; align-items: center">
+                            <div class="PostId">Post Id: @item.Id.ToString()</div>
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="width:100%; padding: 1em">
+                        <div class="PostBody">@item.Body</div>
+                    </div>
+
+                    <AuthorizeView>
+                        <Authorized>
+                            @if (context.User.Identity.Name == item.User.Username)
+                            {
+                                <div>
+                                    <label @onclick="@(() => RemovePost(item.Id))" style="cursor:pointer; color: red; font-weight: bold">
+                                        &#x2717;
+                                    </label>
+                                </div>
+
+                                <div class="PostIconRow">
+                                    <div class="EditPostIcon">
+                                        <img src="icons/editGif.gif" class="funnel" @onclick="@(() => _navigationManager.NavigateTo($"/EditRedditPost/{item.Id}"))"/>
+                                    </div>
+                                </div>}
+                        </Authorized>
+                    </AuthorizeView>
+
+
+                </div>
+
+
+            </span>
+
+        </div>
+    }
+}
+@if (!string.IsNullOrEmpty(_msg))
+{
+    <label style="color: red">@_msg</label>
+}
+
+@code {
+    private IEnumerable<RedditPost>? _redditPosts;
+    private string _msg = "";
+    private bool _doShowFilters = false;
+
+    private string? _ownerFilter;
+    private string? _titleFilter;
+    private string? _idFilter;
+
+    private async Task LoadRedditPosts()
+    {
+        try
+        {
+            _redditPosts = await RedditPostService.GetPostsAsync(_ownerFilter, _titleFilter, _idFilter);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _msg = e.Message;
+        }
+    }
+
+    private async Task RemovePost(int postId)
+    {
+        var _owner = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity?.Name;
+        RedditPost temp = _redditPosts.FirstOrDefault(x => x.Id == postId)!;
+        if (temp.User.Username != _owner)
+        {
+            _msg = "You can only delete your own posts";
+            return;
+        }
+        _msg = "";
+        try
+        {
+            await RedditPostService.DeletePostAsync(postId);
+
+            var list = new List<RedditPost>(_redditPosts!);
+            list.RemoveAll(_redditPosts => _redditPosts.Id == postId);
+            _redditPosts = list.AsEnumerable();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _msg = e.Message;
+        }
+    }
+
+}

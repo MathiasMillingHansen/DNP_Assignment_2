@@ -1,0 +1,17 @@
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/bin/Debug/net7.0/FileData.deps.json
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/bin/Debug/net7.0/FileData.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/bin/Debug/net7.0/FileData.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/bin/Debug/net7.0/Application.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/bin/Debug/net7.0/Shared.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/bin/Debug/net7.0/Application.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/bin/Debug/net7.0/Shared.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.csproj.AssemblyReference.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.AssemblyInfoInputs.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.AssemblyInfo.cs
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.csproj.CoreCompileInputs.cache
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.csproj.CopyComplete
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/refint/FileData.dll
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/FileData.pdb
+/Users/mathiashansen/RiderProjects/DNP_Assignemt/FileData/obj/Debug/net7.0/ref/FileData.dll

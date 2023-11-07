@@ -1,0 +1,66 @@
+{
+  "Users": [
+    {
+      "Username": "Admin",
+      "Password": "Admin",
+      "RedditPosts": [
+        {
+          "Title": "Test",
+          "Body": "w0irhg0sdhjfgsoufhgaoduhfoaudhiyhfioaydhfioadyhfaioyfheioyahniyob aiefgiayeg fuaeygf uaeyogfaiydgf ilagfo e hfbag fyauiegf ia",
+          "User": {
+            "Username": "Admin"
+          },
+          "Id": 1
+        },
+        {
+          "Title": "asfafgag",
+          "Body": "ghghedthtehet",
+          "User": {
+            "Username": "Admin"
+          },
+          "Id": 4
+        }
+      ]
+    },
+    {
+      "Username": "Jens",
+      "Password": "1234",
+      "RedditPosts": [
+        {
+          "Title": "teest",
+          "Body": "etaduof",
+          "User": {
+            "Username": "Jens"
+          },
+          "Id": 2
+        },
+        {
+          "Title": "toahdnasd",
+          "Body": "aoefh80q9e",
+          "User": {
+            "Username": "Jens"
+          },
+          "Id": 3
+        },
+        {
+          "Title": "Hej",
+          "Body": "Jeg hedder jens",
+          "User": {
+            "Username": "Jens"
+          },
+          "Id": 5
+        }
+      ]
+    },
+    {
+      "Username": "Morten",
+      "Password": "1234",
+      "RedditPosts": []
+    },
+    {
+      "Username": "string",
+      "Password": "string",
+      "RedditPosts": []
+    }
+  ]
+}

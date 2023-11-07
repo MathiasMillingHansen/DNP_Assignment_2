@@ -1,0 +1,135 @@
+﻿@page "/ViewSingleRedditPost/{id:int}"
+@using Clients.ClientInterfaces
+@using global::Shared.DTOs.RedditPost
+@using global::Shared.Models
+@inject IRedditPostService RedditPostService;
+@inject IUserService _userService
+@inject NavigationManager _navigationManager;
+@inject AuthenticationStateProvider AuthenticationStateProvider;
+
+
+@code{
+
+    [Parameter]
+    public int Id { get; set; }
+
+
+    private RedditPostDto _redditPost = null!;
+    private string msg = "";
+    private IEnumerable<User>? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        msg = "Loading...";
+        try
+        {
+            users = await _userService.GetUsersAsync();
+            RedditPostDto redditPostData = await RedditPostService.GetPostByIdAsync(Id);
+            _redditPost = redditPostData;
+            msg = "";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+
+
+    private async Task RemovePost(int postId)
+    {
+        var _owner = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity?.Name;
+        if (_redditPost.User.Username != _owner)
+        {
+            return;
+        }
+
+        try
+        {
+            await RedditPostService.DeletePostAsync(postId);
+
+            _navigationManager.NavigateTo("/ViewRedditPosts");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+
+}
+
+
+<h3 style="display: flex; width: 100%; justify-content: center">View Reddit Post</h3>
+
+<div class="box-shadow">
+    @if (users == null)
+    {
+        <label>Loading users...</label>
+    }
+    else if (!users.Any())
+    {
+        <label>No users, you cannot create a Todo</label>
+    }
+    else if (_redditPost == null)
+    {
+        <label>Loading Reddit Post data..</label>
+    }
+    else
+    {
+        <span>
+
+            <div class="RedditPost">
+
+                <div class="row" style="width:100%; padding: 1em; margin-bottom: 2em">
+
+                    <div class="col-4" style="justify-content: left; display: flex; align-items: center">
+                        <div class="PostOwner">Post Creator: <a class="LinkToUser" href="/user?Username=@_redditPost.User.Username">@_redditPost.User.Username</a></div>
+                    </div>
+
+                    <div class="col-4" style="justify-content: center; display: flex; align-items: center">
+                        <div class="PostTitle">
+                            <a class="LinkToPost" href="/RedditPost?id=@_redditPost.Id.ToString()">@_redditPost.Title</a>
+                        </div>
+                    </div>
+
+                    <div class="col-4" style="justify-content: right; display: flex; align-items: center">
+                        <div class="PostId">Post Id: @_redditPost.Id.ToString()</div>
+                    </div>
+
+                </div>
+
+                <div class="row" style="width:100%; padding: 1em">
+                    <div class="PostBody">@_redditPost.Body</div>
+                </div>
+
+                <AuthorizeView>
+                    <Authorized>
+                        @if (context.User.Identity.Name == _redditPost.User.Username)
+                        {
+                            <div>
+                                <label @onclick="@(() => RemovePost(_redditPost.Id))" style="cursor:pointer; color: red; font-weight: bold">
+                                    &#x2717;
+                                </label>
+                            </div>
+
+                            <div class="PostIconRow">
+                                <div class="EditPostIcon">
+                                    <img src="icons/editGif.gif" class="funnel" @onclick="@(() => _navigationManager.NavigateTo($"/EditRedditPost/{Id}"))"/>
+                                </div>
+                            </div>}
+                    </Authorized>
+                </AuthorizeView>
+
+
+            </div>
+
+
+        </span>
+
+        @if (!string.IsNullOrEmpty(msg))
+        {
+            <label style="color: red">@msg</label>
+        }
+    }
+
+</div>

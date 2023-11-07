@@ -2,7 +2,10 @@
 POST https://localhost:7188/auth/login
 Content-Type: application/json
 
-{ "Username" : "Jens", "Password" : "1234" }
+{
+  "Username": "Jens",
+  "Password": "1234"
+}
 
 ###
 

@@ -1,11 +1,9 @@
 ﻿@page "/CreateRedditPost"
+@using System.Security.Claims
 @using global::Shared.Models
+@using global::Shared.DTOs.User
 @using Clients.ClientInterfaces
 @using global::Shared.DTOs.RedditPost
-@using global::Shared.DTOs.User
-@using Microsoft.AspNetCore.Authentication
-@using System.Security.Claims
-@using BlazorApp.Authentication
 @inject IUserService UserService
 @inject IRedditPostService RedditPostService;
 @inject NavigationManager NavMgr;
@@ -109,10 +107,10 @@
         {
             var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
             var user = authenticationState.User;
-            
+
             _selectedUser = new OwnerDto(user.FindFirstValue(ClaimTypes.Name));
-            
-            RedditPostCreationDto dto = new RedditPostCreationDto(_selectedUser, _redditPostBody, _redditPostTitle);
+
+            var dto = new RedditPostCreationDto(_selectedUser, _redditPostBody, _redditPostTitle);
             await RedditPostService.CreatePostAsync(dto);
             NavMgr.NavigateTo("/CreateRedditPost");
 
@@ -130,4 +128,3 @@
     }
 
 }
-

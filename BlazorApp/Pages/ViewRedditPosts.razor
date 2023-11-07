@@ -59,7 +59,7 @@ else
                     <div class="row" style="width:100%; padding: 1em; margin-bottom: 2em">
 
                         <div class="col-4" style="justify-content: left; display: flex; align-items: center">
-                            <div class="PostOwner">Post Creator: <a class="LinkToUser" href="/user?Username=@item.User.Username">@item.User.Username</a></div>
+                            <div class="PostOwner">Post Creator: <a class="LinkToUser" href="/user?Username=@item.UserName">@item.UserName</a></div>
                         </div>
 
                         <div class="col-4" style="justify-content: center; display: flex; align-items: center">
@@ -80,7 +80,7 @@ else
 
                     <AuthorizeView>
                         <Authorized>
-                            @if (context.User.Identity.Name == item.User.Username)
+                            @if (context.User.Identity.Name == item.UserName)
                             {
                                 <div>
                                     <label @onclick="@(() => RemovePost(item.Id))" style="cursor:pointer; color: red; font-weight: bold">
@@ -92,7 +92,8 @@ else
                                     <div class="EditPostIcon">
                                         <img src="icons/editGif.gif" class="funnel" @onclick="@(() => _navigationManager.NavigateTo($"/EditRedditPost/{item.Id}"))"/>
                                     </div>
-                                </div>}
+                                </div>
+                            }
                         </Authorized>
                     </AuthorizeView>
 
@@ -113,7 +114,7 @@ else
 @code {
     private IEnumerable<RedditPost>? _redditPosts;
     private string _msg = "";
-    private bool _doShowFilters = false;
+    private bool _doShowFilters;
 
     private string? _ownerFilter;
     private string? _titleFilter;
@@ -124,6 +125,7 @@ else
         try
         {
             _redditPosts = await RedditPostService.GetPostsAsync(_ownerFilter, _titleFilter, _idFilter);
+            var stop = 0;
         }
         catch (Exception e)
         {
@@ -135,7 +137,7 @@ else
     private async Task RemovePost(int postId)
     {
         var _owner = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity?.Name;
-        RedditPost temp = _redditPosts.FirstOrDefault(x => x.Id == postId)!;
+        var temp = _redditPosts.FirstOrDefault(x => x.Id == postId)!;
         if (temp.User.Username != _owner)
         {
             _msg = "You can only delete your own posts";

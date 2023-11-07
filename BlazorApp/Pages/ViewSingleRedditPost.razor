@@ -1,7 +1,6 @@
 ﻿@page "/ViewSingleRedditPost/{id:int}"
-@using Clients.ClientInterfaces
-@using global::Shared.DTOs.RedditPost
 @using global::Shared.Models
+@using Clients.ClientInterfaces
 @inject IRedditPostService RedditPostService;
 @inject IUserService _userService
 @inject NavigationManager _navigationManager;
@@ -14,7 +13,7 @@
     public int Id { get; set; }
 
 
-    private RedditPostDto _redditPost = null!;
+    private RedditPost _redditPost = null!;
     private string msg = "";
     private IEnumerable<User>? users;
 
@@ -24,7 +23,7 @@
         try
         {
             users = await _userService.GetUsersAsync();
-            RedditPostDto redditPostData = await RedditPostService.GetPostByIdAsync(Id);
+            var redditPostData = await RedditPostService.GetPostByIdAsync(Id);
             _redditPost = redditPostData;
             msg = "";
         }
@@ -39,7 +38,7 @@
     private async Task RemovePost(int postId)
     {
         var _owner = (await AuthenticationStateProvider.GetAuthenticationStateAsync()).User.Identity?.Name;
-        if (_redditPost.User.Username != _owner)
+        if (_redditPost.UserName != _owner)
         {
             return;
         }
@@ -83,7 +82,7 @@
                 <div class="row" style="width:100%; padding: 1em; margin-bottom: 2em">
 
                     <div class="col-4" style="justify-content: left; display: flex; align-items: center">
-                        <div class="PostOwner">Post Creator: <a class="LinkToUser" href="/user?Username=@_redditPost.User.Username">@_redditPost.User.Username</a></div>
+                        <div class="PostOwner">Post Creator: <a class="LinkToUser" href="/user?Username=@_redditPost.">@_redditPost.UserName</a></div>
                     </div>
 
                     <div class="col-4" style="justify-content: center; display: flex; align-items: center">
@@ -104,7 +103,7 @@
 
                 <AuthorizeView>
                     <Authorized>
-                        @if (context.User.Identity.Name == _redditPost.User.Username)
+                        @if (context.User.Identity.Name == _redditPost.UserName)
                         {
                             <div>
                                 <label @onclick="@(() => RemovePost(_redditPost.Id))" style="cursor:pointer; color: red; font-weight: bold">
@@ -116,7 +115,8 @@
                                 <div class="EditPostIcon">
                                     <img src="icons/editGif.gif" class="funnel" @onclick="@(() => _navigationManager.NavigateTo($"/EditRedditPost/{Id}"))"/>
                                 </div>
-                            </div>}
+                            </div>
+                        }
                     </Authorized>
                 </AuthorizeView>
 

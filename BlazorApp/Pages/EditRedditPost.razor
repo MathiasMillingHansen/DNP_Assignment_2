@@ -1,6 +1,6 @@
 @page "/EditRedditPost/{id:int}"
-@using global::Shared.Models
 @using global::Shared.DTOs.RedditPost
+@using global::Shared.Models
 @using Clients.ClientInterfaces
 @inject IRedditPostService _redditPostService
 @inject IUserService _userService
@@ -9,23 +9,24 @@
 <h3 style="display: flex; width: 100%; justify-content: center">Edit Reddit Post</h3>
 
 @code {
+
     [Parameter]
     public int Id { get; set; }
 
     private RedditPostUpdateDto dto = null!;
     private string msg = "";
     private IEnumerable<User>? users;
-    
+
     protected override async Task OnInitializedAsync()
     {
         msg = "";
         try
         {
             users = await _userService.GetUsersAsync();
-            RedditPostDto redditPostData = await _redditPostService.GetPostByIdAsync(Id);
-            //User currentlyAssigned = users.First(user => user.Username.Equals(redditPostData.User.Username));
+            var redditPostData = await _redditPostService.GetPostByIdAsync(Id);
+    //User currentlyAssigned = users.First(user => user.Username.Equals(redditPostData.User.Username));
 
-            dto = new(redditPostData.Body);
+            dto = new RedditPostUpdateDto(redditPostData.Body);
             dto.Id = redditPostData.Id;
         }
         catch (Exception e)
@@ -33,9 +34,8 @@
             Console.WriteLine(e);
             msg = e.Message;
         }
-        
     }
-    
+
     private async Task UpdateAsync()
     {
         try
@@ -49,6 +49,7 @@
             msg = e.Message;
         }
     }
+
 }
 
 <div class="card">

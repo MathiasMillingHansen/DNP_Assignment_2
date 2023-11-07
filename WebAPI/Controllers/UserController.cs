@@ -6,25 +6,23 @@ using Shared.Models;
 
 namespace WebAPI.Controllers;
 
-
 [ApiController]
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
-
     private readonly IUserLogic _userLogic;
 
     public UserController(IUserLogic userlogic)
     {
         _userLogic = userlogic;
     }
-    
+
     [HttpPost]
     public async Task<ActionResult<User>> CreateAsync([FromBody] UserCreationDto dto)
     {
         try
         {
-            User user = await _userLogic.CreateUserAsync(dto);
+            var user = await _userLogic.CreateUserAsync(dto);
             return Created($"/users/{user.Username}", user);
         }
         catch (Exception e)
@@ -39,7 +37,7 @@ public class UserController : ControllerBase
     {
         try
         {
-            ICollection<GetUserDto> users = await _userLogic.GetAllUsersAsync();
+            var users = await _userLogic.GetAllUsersAsync();
             return Ok(users);
         }
         catch (Exception e)
@@ -48,17 +46,14 @@ public class UserController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-    
+
     [HttpGet("{username}")]
     public async Task<ActionResult<GetUserWithPasswordDto>> GetByUsernameAsync(string username)
     {
         try
         {
-            GetUserWithPasswordDto? user = await _userLogic.GetUserByUsernameAsync(username);
-            if (user == null)
-            {
-                return NotFound();
-            }
+            var user = await _userLogic.GetUserByUsernameAsync(username);
+            if (user == null) return NotFound();
             return Ok(user);
         }
         catch (Exception e)
@@ -67,7 +62,4 @@ public class UserController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-    
-    
-
 }

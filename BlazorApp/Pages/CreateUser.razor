@@ -1,6 +1,6 @@
 ﻿@page "/CreateUser"
-@using global::Shared.DTOs
 @using Clients.ClientInterfaces
+@using global::Shared.DTOs
 @inject IUserService UserService
 
 <div class="CreateUserViewGeneral">
@@ -18,13 +18,13 @@
         }
     </div>
     <div class="form-group field">
-            <label>Password:</label>
-            <input type="text" @bind="_password" @bind:event="oninput"/>
-            @if (!string.IsNullOrEmpty(_resultMsg))
-            {
-                <label style="color: @_color">@_resultMsg</label>
-            }
-        </div>
+        <label>Password:</label>
+        <input type="text" @bind="_password" @bind:event="oninput"/>
+        @if (!string.IsNullOrEmpty(_resultMsg))
+        {
+            <label style="color: @_color">@_resultMsg</label>
+        }
+    </div>
     <div class="button-row">
         <button @onclick="Create" disabled="@(string.IsNullOrEmpty(_username))" class="acceptbtn">Create</button>
     </div>
@@ -35,7 +35,7 @@
     private string _password = "";
     private string _resultMsg = "";
     private string _color = "";
-    
+
     private async Task Create()
     {
         _resultMsg = "";
@@ -55,4 +55,5 @@
             _color = "red";
         }
     }
+
 }

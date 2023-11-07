@@ -3,7 +3,6 @@ using Application.LogicInterfaces;
 using Shared.DTOs.RedditPost;
 using Shared.Models;
 
-
 namespace Application.Logic;
 
 public class RedditPostLogic : IRedditPostLogic
@@ -19,15 +18,12 @@ public class RedditPostLogic : IRedditPostLogic
 
     public async Task<RedditPost> CreateRedditPostAsync(RedditPostCreationDto dto)
     {
-        User? user = await userDao.GetByUsername(dto.Owner.Username);
-        if (user == null)
-        {
-            throw new Exception($"User with id {dto.Owner} was not found.");
-        }
+        var user = await userDao.GetByUsername(dto.Owner.Username);
+        if (user == null) throw new Exception($"User with id {dto.Owner} was not found.");
 
         ValidateRedditPost(dto);
-        RedditPost redditPost = new RedditPost(dto.Title, dto.Body, dto.Owner);
-        RedditPost created = await redditPostDao.CreateRedditPostAsync(redditPost);
+        var redditPost = new RedditPost(dto.Title, dto.Body, user);
+        var created = await redditPostDao.CreateRedditPostAsync(redditPost);
         return created;
     }
 
@@ -38,17 +34,11 @@ public class RedditPostLogic : IRedditPostLogic
 
     public async Task UpdateRedditPostAsync(RedditPostUpdateDto redditPostDto)
     {
-        RedditPost? existing = await redditPostDao.GetRedditPostById(redditPostDto.Id);
+        var existing = await redditPostDao.GetRedditPostById(redditPostDto.Id);
 
-        if (existing == null)
-        {
-            throw new Exception(message: $"RedditPost with ID {redditPostDto.Id} not found!");
-        }
+        if (existing == null) throw new Exception($"RedditPost with ID {redditPostDto.Id} not found!");
 
-        if (String.IsNullOrEmpty(redditPostDto.Body))
-        {
-            throw new Exception("Body cannot be empty.");
-        }
+        if (string.IsNullOrEmpty(redditPostDto.Body)) throw new Exception("Body cannot be empty.");
 
         existing.Body = redditPostDto.Body;
 
@@ -57,11 +47,8 @@ public class RedditPostLogic : IRedditPostLogic
 
     public async Task DeleteRedditPost(int id)
     {
-        RedditPost? existing = await redditPostDao.GetRedditPostById(id);
-        if (existing == null)
-        {
-            throw new Exception(message: $"RedditPost with ID {id} not found!");
-        }
+        var existing = await redditPostDao.GetRedditPostById(id);
+        if (existing == null) throw new Exception($"RedditPost with ID {id} not found!");
 
         await redditPostDao.DeleteRedditPost(id);
     }

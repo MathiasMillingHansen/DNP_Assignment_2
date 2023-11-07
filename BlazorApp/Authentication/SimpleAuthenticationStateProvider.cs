@@ -15,7 +15,7 @@ public class SimpleAuthenticationStateProvider : AuthenticationStateProvider
 
     public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
-        ClaimsPrincipal principal = await authManager.GetAuthAsync();
+        var principal = await authManager.GetAuthAsync();
         return await Task.FromResult(new AuthenticationState(principal));
     }
 

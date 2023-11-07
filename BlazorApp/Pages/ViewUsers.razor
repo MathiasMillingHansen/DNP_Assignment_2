@@ -25,7 +25,7 @@ else if (!_users.Any())
 else
 {
     <div class="users-container">
-        @foreach (User user in _users)
+        @foreach (var user in _users)
         {
             <div class="user-card">
                 <label>@user.Username</label>
@@ -51,5 +51,5 @@ else
             _msg = e.Message;
         }
     }
-   
+
 }

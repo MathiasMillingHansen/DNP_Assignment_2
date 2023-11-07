@@ -16,15 +16,9 @@ public class UserFileDao : IUserDao
     public Task<User> CreateAsync(User user)
     {
         if (context.Users.Any())
-        {
-            foreach (User _user in context.Users)
-            {
+            foreach (var _user in context.Users)
                 if (_user.Username.Equals(user.Username))
-                {
                     throw new ArgumentException("Username unavailable");
-                }
-            }
-        }
 
         context.Users.Add(user);
         context.SaveChanges();
@@ -32,9 +26,23 @@ public class UserFileDao : IUserDao
         return Task.FromResult(user);
     }
 
+    public Task<User?> GetByUsername(string userName)
+    {
+        var existing = context.Users.FirstOrDefault(u =>
+            u.Username.Equals(userName, StringComparison.OrdinalIgnoreCase)
+        );
+        return Task.FromResult(existing);
+        ;
+    }
+
+    public Task<ICollection<User>> GetAllAsync()
+    {
+        return Task.FromResult(context.Users);
+    }
+
     public Task<User?> GetByUsernameAsync(string username)
     {
-        User? existing = context.Users.FirstOrDefault(u =>
+        var existing = context.Users.FirstOrDefault(u =>
             u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)
         );
         return Task.FromResult(existing);
@@ -45,14 +53,6 @@ public class UserFileDao : IUserDao
         throw new NotImplementedException();
     }
 
-    public Task<User?> GetByUsername(string userName)
-    {
-        User? existing = context.Users.FirstOrDefault(u =>
-            u.Username.Equals(userName, StringComparison.OrdinalIgnoreCase)
-        );
-        return Task.FromResult(existing);;
-    }
-
     public Task<IEnumerable<User>> GetUser(SearchUserParametersDto searchParameters)
     {
         throw new NotImplementedException();
@@ -61,10 +61,5 @@ public class UserFileDao : IUserDao
     public Task<User?> GetById(int id)
     {
         throw new NotImplementedException();
-    }
-
-    public Task<ICollection<User>> GetAllAsync()
-    {
-        return Task.FromResult(context.Users);
     }
 }

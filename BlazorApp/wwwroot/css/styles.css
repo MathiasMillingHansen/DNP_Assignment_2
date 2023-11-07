@@ -1,5 +1,5 @@
 ﻿.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: auto;
     padding: 25px;
@@ -22,14 +22,14 @@
 }
 
 .acceptbtn {
-    background-color:lightgreen;
+    background-color: lightgreen;
     border-radius: 5px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.PostIconRow{
+.PostIconRow {
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
@@ -38,7 +38,7 @@
     padding: 2rem;
 }
 
-.EditPostIcon{
+.EditPostIcon {
     cursor: pointer;
     display: flex;
     justify-content: right;
@@ -46,7 +46,7 @@
     height: 2em;
 }
 
-.button-row{
+.button-row {
     margin-top: 15px;
 }
 
@@ -55,14 +55,14 @@
 }
 
 .acceptbtn {
-    background-color:lightgreen;
+    background-color: lightgreen;
     border-radius: 5px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.button-row{
+.button-row {
     margin-top: 15px;
 }
 
@@ -99,16 +99,15 @@
     font-weight: bold;
     width: 100%;
     font-family: "Calibri";
-    
+
 }
 
-.LinkToUser{
+.LinkToUser {
     text-decoration: underline;
     color: black;
 }
 
-.LinkToPost
-{
+.LinkToPost {
     text-decoration: underline;
     color: black;
 }
@@ -203,7 +202,7 @@
     padding: 2rem;
 }
 
-.IndexHello{
+.IndexHello {
     color: black;
     display: flex;
     flex-flow: column;
@@ -214,7 +213,7 @@
     justify-content: center;
 }
 
-.funnel{
+.funnel {
     cursor: pointer;
     display: flex;
     justify-content: left;
@@ -228,7 +227,7 @@
     text-align: center;
 }
 
-.content{
+.content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

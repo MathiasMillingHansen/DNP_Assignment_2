@@ -1,29 +1,26 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Shared.DTOs;
-using Shared.DTOs.User;
-
-namespace Shared.Models;
+﻿namespace Shared.Models;
 
 public class RedditPost
 {
-    public string Title { get; private set; }
-    public string Body { get; set; }
-    
-    public OwnerDto User { get; private set; }
-    public int Id { get; set; }
-
-    public RedditPost(string Title, string Body, OwnerDto User)
+    public RedditPost(string Title, string Body, User User)
     {
         this.Title = Title;
         this.Body = Body;
-        this.User = User;
+        UserName = User.Username;
     }
-    
+
     public RedditPost()
     {
-        
     }
-    
+
+    public string Title { get; set; }
+    public string Body { get; set; }
+
+    public User User { get; }
+
+    public int Id { get; set; }
+    public string UserName { get; set; }
+
     public override string ToString()
     {
         return $"Title: {Title}, Body: {Body}, User: {User}";

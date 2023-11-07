@@ -1,23 +1,21 @@
 using Application.DaoInterfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Shared.Models;
 
 namespace EfcDataAccess.EfcDao;
 
 public class EfcRedditPostDao : IRedditPostDao
 {
-    
     private readonly EfcRedditContext _context;
-    
+
     public EfcRedditPostDao(EfcRedditContext context)
     {
         _context = context;
     }
-    
+
     public async Task<RedditPost> CreateRedditPostAsync(RedditPost redditPost)
     {
-        EntityEntry<RedditPost> newRedditPost = await _context.RedditPosts.AddAsync(redditPost);
+        var newRedditPost = await _context.RedditPosts.AddAsync(redditPost);
         await _context.SaveChangesAsync();
         return newRedditPost.Entity;
     }
@@ -36,7 +34,7 @@ public class EfcRedditPostDao : IRedditPostDao
 
     public async Task<RedditPost> GetRedditPostById(int id)
     {
-        RedditPost? existing = await _context.RedditPosts.FirstOrDefaultAsync(u =>
+        var existing = await _context.RedditPosts.FirstOrDefaultAsync(u =>
             u.Id.Equals(id)
         );
         return existing!;
@@ -44,7 +42,7 @@ public class EfcRedditPostDao : IRedditPostDao
 
     public async Task DeleteRedditPost(int id)
     {
-        RedditPost? postToDelete = await GetRedditPostById(id);
+        var postToDelete = await GetRedditPostById(id);
         _context.RedditPosts.Remove(postToDelete!);
         await _context.SaveChangesAsync();
     }
@@ -53,21 +51,14 @@ public class EfcRedditPostDao : IRedditPostDao
     {
         ICollection<RedditPost> posts;
         if (owner != null)
-        {
-            posts = await _context.RedditPosts.Where(p => p.User.Username.ToLower().Equals(owner.ToLower())).ToListAsync();
-        }
+            posts = await _context.RedditPosts.Where(p => p.User.Username.ToLower().Equals(owner.ToLower()))
+                .ToListAsync();
         if (title != null)
-        {
             posts = await _context.RedditPosts.Where(p => p.Title.ToLower().Equals(title.ToLower())).ToListAsync();
-        }
         if (id != null)
-        {
             posts = await _context.RedditPosts.Where(p => p.Id.Equals(id)).ToListAsync();
-        }
         else
-        {
             posts = await _context.RedditPosts.ToListAsync();
-        }
 
         return posts;
     }

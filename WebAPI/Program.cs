@@ -4,12 +4,9 @@ using Application.Logic;
 using Application.LogicInterfaces;
 using EfcDataAccess;
 using EfcDataAccess.EfcDao;
-using FileContext.DAOs;
-using FileData.DAOs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using WebAPI.Services;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,9 +24,10 @@ builder.Services.AddScoped<IRedditPostLogic, RedditPostLogic>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddDbContext<EfcRedditContext>();
 builder.Services.AddScoped(
-    sp => 
-        new HttpClient { 
-            BaseAddress = new Uri("https://localhost:7188") 
+    sp =>
+        new HttpClient
+        {
+            BaseAddress = new Uri("https://localhost:7188")
         }
 );
 

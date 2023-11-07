@@ -5,20 +5,20 @@ namespace Shared.DTOs.User;
 [TypeConverter(typeof(OwnerDto))]
 public class OwnerDtoTypeConverter
 {
-    public static implicit operator OwnerDto(OwnerDtoTypeConverter ownerDtoTypeConverter)
+    public OwnerDtoTypeConverter(string username)
     {
-        return new(ownerDtoTypeConverter.Username);
-    }
-
-    public static implicit operator OwnerDtoTypeConverter(OwnerDto ownerDto)
-    {
-        return new(ownerDto.Username);
+        Username = username;
     }
 
     public string Username { get; set; }
 
-    public OwnerDtoTypeConverter(string username)
+    public static implicit operator OwnerDto(OwnerDtoTypeConverter ownerDtoTypeConverter)
     {
-        Username = username;
-    }    
+        return new OwnerDto(ownerDtoTypeConverter.Username);
+    }
+
+    public static implicit operator OwnerDtoTypeConverter(OwnerDto ownerDto)
+    {
+        return new OwnerDtoTypeConverter(ownerDto.Username);
+    }
 }

@@ -1,5 +1,5 @@
 card[b-s2d0eyv7ri] {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 250px;
     padding: 25px;
@@ -14,14 +14,14 @@ card[b-s2d0eyv7ri] {
 }
 
 .acceptbtn[b-s2d0eyv7ri] {
-    background-color:lightgreen;
+    background-color: lightgreen;
     border-radius: 5px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.button-row[b-s2d0eyv7ri]{
+.button-row[b-s2d0eyv7ri] {
     margin-top: 15px;
 }
 
